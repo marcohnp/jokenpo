@@ -40,7 +40,7 @@ public class Match {
 		int scoreboardCPU = 0, scoreboardPlayer = 0;
 		boolean status = false;
 		
-		while (status == false) {
+		do {
 			System.out.println("0 - Rock; 1 - Paper; 2 - Scissors;");
 			System.out.println();
 			System.out.print("Type your move: ");
@@ -96,10 +96,8 @@ public class Match {
 			}
 			System.out.println();
 			scoreboard(scoreboardCPU, scoreboardPlayer);
-			System.out.println();
-			status = playAgain();
- 			System.out.println();	
-		}
+			System.out.println();	
+		} while (!playAgain());
 		sc.close();
 	}
 	
